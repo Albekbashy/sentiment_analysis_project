@@ -1,11 +1,28 @@
 import sys
 import os
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../../")))
+from pathlib import Path
 import pandas as pd
-from data_extraction import load_data
 import pytest
 
-def test_load_data(tmp_path):
+# Add project root to Python path
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../../")))
+from data_extraction import load_data
+
+# Example: replace this with your real CSV path
+REAL_FILE_PATH = Path(r"C:\Users\abdul\Downloads\dataset.csv")
+
+def test_load_data_real_file():
+    # Load data using the real CSV file
+    out = load_data(REAL_FILE_PATH)
+
+    # Basic sanity checks
+    assert 'text' in out.columns
+    assert 'label' in out.columns
+    assert set(out['label']).issubset({0, 1})
+    print("Loaded rows:", len(out))
+    print(out.head())
+
+def test_load_data_tmp_file(tmp_path):
     # Create a temporary CSV file
     df = pd.DataFrame({
         'reviewId': ['r1','r2','r3'],
