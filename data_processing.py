@@ -1,5 +1,20 @@
 import pandas as pd
 import re
+from transformers import AutoTokenizer
+
+tokenizer = AutoTokenizer.from_pretrained("bert-base-uncased")
+
+def tokenize_data(df, max_length=128):
+    """
+    Convert texts into BERT tokens and attention masks.
+    """
+    encodings = tokenizer(
+        df["text"].tolist(),
+        truncation=True,
+        padding=True,
+        max_length=max_length
+    )
+    return encodings
 
 def clean_text(text: str) -> str:
     """
