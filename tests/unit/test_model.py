@@ -1,10 +1,14 @@
-from model import load_model
+from model import load_model  # relative import
 import torch
 
-def test_model_forward_shape():
+def test_model_output_shape():
     model = load_model()
-    # Create dummy input (batch_size=2, sequence_length=10)
-    dummy = torch.randint(0, 1000, (2, 10))
-    outputs = model(dummy)
-    # Check output shape: batch_size x num_labels
+    dummy_input = torch.randint(0, 1000, (2, 10))
+    outputs = model(dummy_input)
     assert outputs.logits.shape == (2, 2)
+
+def test_model_batch_size():
+    model = load_model()
+    dummy_input = torch.randint(0, 1000, (5, 10))
+    outputs = model(dummy_input)
+    assert outputs.logits.shape[0] == 5
