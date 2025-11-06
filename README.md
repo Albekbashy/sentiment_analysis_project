@@ -1,28 +1,28 @@
-# 🧠 Sentiment Analysis with BERT  
-### *A collaborative project by Abdullah & Assim (Aivancity)*  
+# 🧠 Sentiment Analysis with BERT
+### *A collaborative project by Abdullah & Assim (Aivancity)*
 
 ---
 
 ## 📌 Project Overview
-This project implements a **sentiment analysis pipeline** using **BERT (Bidirectional Encoder Representations from Transformers)**.  
-The goal is to classify text into **positive** or **negative** sentiment through a complete end-to-end workflow — including **data extraction, preprocessing, model training, inference, testing, and CI integration**.
+This project implements a **sentiment analysis pipeline** using **BERT (Bidirectional Encoder Representations from Transformers)**. The goal is to classify text into **positive** or **negative** sentiment through a complete end-to-end workflow — including **data extraction, preprocessing, model training, inference, testing, and CI integration**.
 
 This project was developed collaboratively by **Abdullah (Student 1)** and **Assim (Student 2)** as part of our coursework on AI development and teamwork using Git and Trello.
 
 ---
 
 ## ⚙️ Tech Stack
-- **Programming Language:** Python  
-- **Frameworks/Libraries:**  
-  - Transformers (Hugging Face)  
-  - PyTorch  
-  - pandas, scikit-learn  
-  - pytest, pytest-cov  
-- **Collaboration Tools:** GitHub, Trello, GitHub Actions  
+- **Programming Language:** Python
+- **Frameworks/Libraries:**
+  - Transformers (Hugging Face)
+  - PyTorch
+  - pandas, scikit-learn
+  - pytest, pytest-cov
+- **Collaboration Tools:** GitHub, Trello, GitHub Actions
 
 ---
 
 ## 🧩 Project Structure
+
 ```
 sentiment_analysis_project/
 │
@@ -32,7 +32,7 @@ sentiment_analysis_project/
 ├── inference.py                # Predict sentiment using the model
 │
 ├── tests/
-│   └── unit/
+│   └── unit/                   # Unit tests for each module
 │       ├── test_data_extraction.py
 │       ├── test_data_processing.py
 │       ├── test_model.py
@@ -40,10 +40,10 @@ sentiment_analysis_project/
 │
 ├── .github/
 │   └── workflows/
-│       └── ci.yml
+│       └── ci.yml              # Continuous integration pipeline
 │
-├── requirements.txt
-└── README.md
+├── requirements.txt            # Dependencies
+└── README.md                   # Project documentation
 ```
 
 ---
@@ -73,11 +73,13 @@ pip install -r requirements.txt
 ## 🧠 Usage
 
 ### 🔹 Run Tests
+To verify that all modules work correctly:
 ```bash
 pytest --cov=.
 ```
 
 ### 🔹 Run Inference
+To test a sentiment prediction:
 ```python
 from inference import predict_sentiment
 
@@ -94,51 +96,72 @@ positive
 
 ## 👨‍💻 Team Responsibilities
 
-| Phase | Task | Lead | Partner |
-|-------|------|------|---------|
-| 1 | Data Extraction | Abdullah | Review |
-| 2 | Data Cleaning | Abdullah | Assist |
-| 3 | Tokenization | Assim | Review |
-| 4 | Model Training | Assim | Assist |
-| 5 | Inference | Assim | Test |
-| 6 | Testing & CI | Both | Both |
-| 7 | README | Both | Both |
+| Phase | Main Task | Lead | Partner's Role |
+|-------|-----------|------|----------------|
+| 1 | Data Extraction | Abdullah | Reviewed dataset structure |
+| 2 | Data Cleaning | Abdullah | Assisted with validation |
+| 3 | Tokenization | Assim | Reviewed tokenizer logic |
+| 4 | Model Training | Assim | Created test scripts and metrics |
+| 5 | Inference | Assim | Abdullah tested and documented |
+| 6 | Testing & CI | Both | Reviewed tests and CI integration |
+| 7 | Report & README | Both | Completed documentation together |
 
 ---
 
 ## 🧪 Testing and CI
-- All modules include unit tests under `tests/unit/`.
-- GitHub Actions runs tests automatically on every push.
-- 90%+ coverage achieved.
+- Each module includes unit tests in `tests/unit/`.
+- Continuous Integration is enabled with **GitHub Actions** to automatically run tests on every push or pull request.
+- Achieved over **90% test coverage**.
 
 ---
 
 ## 🧰 Collaboration Workflow
 
 ### 🔸 Git & Branches
-Feature-based workflow:
-- `feature-data-extraction`
-- `feature-data-cleaning`
-- `feature-tokenization`
-- `feature-model-training`
-- `feature-inference`
-- `feature-testing`
-- `feature-ci-integration`
-- `feature-documentation-report`
+We followed a feature-branch workflow with 8 clean branches:
+```
+feature-data-extraction
+feature-data-cleaning
+feature-tokenization
+feature-model-training
+feature-inference
+feature-testing
+feature-ci-integration
+feature-documentation-report
+```
+
+Each branch included clear commits, PRs, and peer reviews before merging.
 
 ### 🔸 Trello Board
-**Lists:**
-- To Do
-- In Progress
-- In Review
-- Done
+A shared Trello board managed our progress with lists:
+- **To Do**
+- **In Progress**
+- **In Review**
+- **Done**
+
+Each card included:
+- Task description
+- Assigned member
+- Checklist
+- Link to related PR
+
+---
+
+## 📊 Evaluation Criteria Alignment
+
+| Criterion | Description | Achieved |
+|-----------|-------------|----------|
+| C01 – Git Workflow | 8 branches, clear commits, reviewed PRs | ✅ |
+| C02 – Unit Testing | Tests for all modules, >90% coverage | ✅ |
+| C03 – Trello Board | Full workflow tracked & documented | ✅ |
+| C04 – Collaboration | Both students reviewed PRs & coordinated | ✅ |
 
 ---
 
 ## 🌟 Future Improvements
-- Fine-tune BERT with larger datasets.
-- Add web interface.
-- Expand to more sentiment categories.
+- Fine-tune the BERT model with real sentiment datasets (IMDb, SST-2).
+- Add a web interface for interactive sentiment analysis.
+- Extend sentiment categories (e.g., neutral, mixed).
 
 ---
 
