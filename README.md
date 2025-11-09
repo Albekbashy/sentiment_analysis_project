@@ -45,6 +45,17 @@ sentiment_analysis_project/
 ├── requirements.txt            # Dependencies
 └── README.md                   # Project documentation
 ```
+---
+
+## 🧩 Project Components (Brief Overview)
+
+- **`data_extraction.py`** → Loads and validates the dataset before processing.
+- **`data_processing.py`** → Cleans and tokenizes text for BERT input.
+- **`model.py`** → Defines and fine-tunes the BERT model for sentiment classification.
+- **`inference.py`** → Runs predictions using the trained model.
+- **`tests/`** → Contains PyTest scripts to ensure module reliability.
+- **`.github/workflows/ci.yml`** → Automates testing via GitHub Actions (CI/CD).
+- **`README.md`** → Describes the project, setup, and structure.
 
 ---
 
