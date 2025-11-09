@@ -38,10 +38,6 @@ sentiment_analysis_project/
 │       ├── test_model.py
 │       └── test_inference.py
 │
-├── .github/
-│   └── workflows/
-│       └── ci.yml              # Continuous integration pipeline
-│
 ├── requirements.txt            # Dependencies
 └── README.md                   # Project documentation
 ```
@@ -54,7 +50,6 @@ sentiment_analysis_project/
 - **`model.py`** → Defines and fine-tunes the BERT model for sentiment classification.
 - **`inference.py`** → Runs predictions using the trained model.
 - **`tests/`** → Contains PyTest scripts to ensure module reliability.
-- **`.github/workflows/ci.yml`** → Automates testing via GitHub Actions (CI/CD).
 - **`README.md`** → Describes the project, setup, and structure.
 
 ---
@@ -119,9 +114,8 @@ positive
 
 ---
 
-## 🧪 Testing and CI
+## 🧪 Testing
 - Each module includes unit tests in `tests/unit/`.
-- Continuous Integration is enabled with **GitHub Actions** to automatically run tests on every push or pull request.
 - Achieved over **90% test coverage**.
 
 ---
@@ -137,7 +131,6 @@ feature-tokenization
 feature-model-training
 feature-inference
 feature-testing
-feature-ci-integration
 feature-documentation-report
 ```
 
