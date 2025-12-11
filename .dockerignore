@@ -1,0 +1,47 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Git
+.git/
+.gitignore
+
+# Documentation
+*.md
+
+# Temporary files
+*.log
+*.tmp
+page_*.png
+extract_pdf.py
+read_pdf_ocr.py
+check_images.py
+new_part2.pdf
+
+# Model files (will be downloaded)
+*.pt
+*.pth
+*.bin
+models/
+
+# OS
+.DS_Store
+Thumbs.db
