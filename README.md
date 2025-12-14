@@ -33,21 +33,20 @@ sentiment_analysis_project/
 │   ├── test.yml                # Unit tests & linting
 │   ├── evaluate.yml            # Model evaluation trigger
 │   └── build.yml               # Docker build & push to Docker Hub
-│
-├── src/                        # Core Application Code
-│   ├── data_extraction.py      # Load and validate dataset
-│   ├── data_processing.py      # Clean and tokenize text
-│   ├── model.py                # Load pretrained BERT model
-│   ├── inference.py            # Predict sentiment logic
-│   ├── cli.py                  # Command Line Interface (Entry point)
-│   └── logger.py               # Database logging module
-│
+│                 
+│── data_extraction.py      # Load and validate dataset
+│── data_processing.py      # Clean and tokenize text
+│── model.py                # Load pretrained BERT model
+│── inference.py            # Predict sentiment logic
+│── cli.py                  # Command Line Interface (Entry point)
+│── logger.py               # Database logging module
+│── train.py                # Train the model
+|── evaluate.py             # Model evaluation
+|
 ├── tests/
 │   └── unit/                   # Unit tests for all modules
 │
-├── config/
-│   └── init-db.sql             # SQL script to initialize database schema
-│
+├── init-db.sql             # SQL script to initialize database schema
 ├── Dockerfile                  # Container definition
 ├── docker-compose.yml          # Multi-container orchestration
 ├── requirements.txt            # Python dependencies
